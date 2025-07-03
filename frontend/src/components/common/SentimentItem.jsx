@@ -23,7 +23,8 @@ function SentimentItem({ result }) {
       </div>
       <div className="sentiment-details">
         <p className="confidence">
-          Confidence: {result.confidence ? result.confidence + "%" : "N/A"}
+          Confidence:{" "}
+          {result.confidence ? result.confidence * 100 + "%" : "N/A"}
         </p>
         <p className="reason">{result.reason || "No reason provided."}</p>
       </div>
